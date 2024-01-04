@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+img {
+  width: 100%;
+  height: unset;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+button:disabled {
+  cursor: default;
+}
+a {
+  text-decoration: none;
+}
+a,
+[type="button"],
+[type="reset"],
+[type="submit"],
+button,
+label[for] {
+  cursor: pointer;
+}
+
+header,
+footer {
+  width: 100%;
+  max-width: 100%;
+}

@@ -1,0 +1,128 @@
+$Purple: hsl(259, 100%, 65%);
+$Light-red: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsl(0, 0%, 86%);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+body {
+  min-height: 100dvh;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  padding: 5rem 1rem 0;
+  @media (min-width: 64rem) {
+    padding: 3rem 21.5rem 0;
+  }
+  .main {
+    background-color: $White;
+    border-radius: 1rem 1rem 7rem;
+    padding: 2.5rem 1rem 1.5rem;
+    @media (min-width: 64rem) {
+      padding: 3rem 3rem 2rem;
+    }
+    .date__form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $Off-white;
+      margin-bottom: 3rem;
+      @media (min-width: 64rem) {
+        margin-bottom: 0;
+        padding-right: 5.5rem;
+        padding-bottom: 2rem;
+      }
+      .input__box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+        }
+        .input__titles {
+          font-size: 0.9rem;
+          color: $Smokey-grey;
+          @media (min-width: 64rem) {
+            font-size: 1rem;
+          }
+          &.error {
+            color: $Light-red;
+          }
+        }
+        .inputs {
+          width: 5.5rem;
+          height: 3rem;
+          border: 1px solid $Off-white;
+          border-radius: 0.4rem;
+          padding: 1rem 0.6rem;
+          font-size: 1.4rem;
+          color: $Off-black;
+          font-weight: 700;
+          outline: none;
+          cursor: pointer;
+          @media (min-width: 64rem) {
+            width: 8rem;
+            height: 4rem;
+            font-size: 2rem;
+          }
+          &:hover,
+          &:focus {
+            border: 1px solid $Purple;
+          }
+          &.error {
+            border: 1px solid $Light-red;
+          }
+        }
+        .error__message {
+          // display: none;
+          font-size: 0.5rem;
+          font-style: italic;
+          font-weight: 500;
+          color: $Light-red;
+          @media (min-width: 64rem) {
+            font-size: 0.7rem;
+          }
+        }
+      }
+      .submit__btn {
+        width: 3.7rem;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        background: $Purple;
+        padding: 1rem;
+        position: absolute;
+        transform: translateY(50%);
+        right: 40%;
+        bottom: 0;
+        transition: 0.2s ease-in;
+        @media (min-width: 64rem) {
+          right: 0;
+          width: 4rem;
+        }
+        &:hover {
+          scale: 1.06;
+          background-color: $Off-black;
+        }
+      }
+    }
+    .result__container {
+      .result__figure {
+        font-style: italic;
+        font-weight: 800;
+        @media (min-width: 64rem) {
+          font-size: 5rem;
+        }
+        .counter {
+          color: $Purple;
+        }
+      }
+    }
+  }
+}
